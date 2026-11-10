@@ -1,29 +1,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>COVID-19 Data Analysis Report</title>
 
     <style>
+
         body {
             font-family: Arial, sans-serif;
-            max-width: 950px;
+            line-height: 1.7;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 20px;
-            line-height: 1.7;
-            color: #222;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
 
         h1, h2, h3 {
-            color: #17365D;
+            color: #183b66;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #183b66;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
         }
 
         table {
@@ -33,41 +51,61 @@
         }
 
         th, td {
-            border: 1px solid #ccc;
-            padding: 9px;
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: left;
         }
 
         th {
-            background-color: #eaf0f7;
+            background-color: #183b66;
+            color: white;
         }
 
-        pre {
-            background: #f4f4f4;
-            padding: 12px;
-            overflow-wrap: anywhere;
+        tr:nth-child(even) {
+            background-color: #f2f5f9;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
         }
 
         @media print {
             body {
-                max-width: 100%;
+                background: white;
                 margin: 0;
-                padding: 10px;
+                max-width: 100%;
             }
 
-            h1, h2, h3 {
+            .container {
+                box-shadow: none;
+            }
+
+            h2, h3 {
                 page-break-after: avoid;
             }
 
-            img, table {
+            img {
                 page-break-inside: avoid;
             }
         }
+
     </style>
+
 </head>
 
 <body>
-    <h1>COVID-19 Data Analysis Project</h1>
+
+    <div class="container">
+
+        <h1>COVID-19 Data Analysis Project</h1>
 <h2>1. Project Overview</h2>
 <p>This project analyzes global COVID-19 data using Python.
 It explores reported cases, deaths, testing, vaccination progress,
@@ -101,7 +139,7 @@ compact dataset.</p>
 </tr>
 <tr>
 <td>Total columns after preprocessing</td>
-<td>66</td>
+<td>60</td>
 </tr>
 <tr>
 <td>Unique countries/entities</td>
@@ -188,36 +226,6 @@ and are documented in the accompanying CSV reports.</p>
 <li>cfr_findings.csv</li>
 </ul>
 <h2>10. Visualizations</h2>
-<p>The project visualizations are stored in the visualizations directory.
-They include global trends, country comparisons, Bangladesh trends,
-vaccination statistics, and correlation analysis.</p>
-<h2>11. Limitations</h2>
-<ul>
-<li>Reported cases and deaths depend on testing and reporting practices.</li>
-<li>Missing values can affect country-level comparisons.</li>
-<li>Countries may have different latest available observation dates.</li>
-<li>Cumulative totals should not be interpreted as daily counts.</li>
-<li>Negative daily values may reflect retrospective reporting corrections.</li>
-<li>Correlation does not establish causation.</li>
-<li>Country-level vaccination and death comparisons do not prove vaccine effectiveness.</li>
-<li>Per-million indicators help account for population size but do not remove
-  differences in demographics, healthcare systems, or reporting quality.</li>
-</ul>
-<h2>12. Conclusion</h2>
-<p>This project demonstrates how Python data analysis tools can be used
-to process, explore, visualize, and statistically analyze a large
-real-world public health dataset.</p>
-<p>The analysis provides an overview of global COVID-19 trends and
-a focused examination of Bangladesh. It also demonstrates the
-importance of data quality, appropriate statistical interpretation,
-and clear visual communication.</p>
-<hr />
-<p><strong>Project:</strong> COVID-19 Data Analysis<br />
-<strong>Dataset:</strong> Our World in Data COVID-19 Compact Dataset<br />
-<strong>Environment:</strong> Python and Jupyter Notebook</p>
-<!-- VISUALIZATIONS START -->
-
-<h2>10. Visualizations</h2>
 <p>The following charts illustrate the major trends and comparisons
 identified during the COVID-19 data analysis.</p>
 <h3>Bangladesh Cases Trend</h3>
@@ -254,230 +262,33 @@ identified during the COVID-19 data analysis.</p>
 <p><img alt="Top 10 Vaccination Coverage" src="../visualizations/top_10_vaccination_coverage.png" /></p>
 <h3>Vaccination Vs Deaths Relationship</h3>
 <p><img alt="Vaccination Vs Deaths Relationship" src="../visualizations/vaccination_vs_deaths_relationship.png" /></p>
-<!-- VISUALIZATIONS END -->
+<h2>11. Limitations</h2>
+<ul>
+<li>Reported cases and deaths depend on testing and reporting practices.</li>
+<li>Missing values can affect country-level comparisons.</li>
+<li>Countries may have different latest available observation dates.</li>
+<li>Cumulative totals should not be interpreted as daily counts.</li>
+<li>Negative daily values may reflect retrospective reporting corrections.</li>
+<li>Correlation does not establish causation.</li>
+<li>Country-level vaccination and death comparisons do not prove vaccine effectiveness.</li>
+<li>Per-million indicators help account for population size but do not remove
+  differences in demographics, healthcare systems, or reporting quality.</li>
+</ul>
+<h2>12. Conclusion</h2>
+<p>This project demonstrates how Python data analysis tools can be used
+to process, explore, visualize, and statistically analyze a large
+real-world public health dataset.</p>
+<p>The analysis provides an overview of global COVID-19 trends and
+a focused examination of Bangladesh. It also demonstrates the
+importance of data quality, appropriate statistical interpretation,
+and clear visual communication.</p>
+<hr />
+<p><strong>Project:</strong> COVID-19 Data Analysis<br />
+<strong>Dataset:</strong> Our World in Data COVID-19 Compact Dataset<br />
+<strong>Environment:</strong> Python and Jupyter Notebook</p>
 
-<!-- STATISTICAL FINDINGS START -->
+    </div>
 
-<h2>9. Statistical Findings</h2>
-<p>This section presents the numerical findings generated from
-the processed COVID-19 dataset.</p>
-<h3>Global COVID-19 Findings</h3>
-<table>
-<thead>
-<tr>
-<th>Metric</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Peak Daily Cases Date</td>
-<td>2022-01-30 00:00:00</td>
-</tr>
-<tr>
-<td>Peak Daily Cases</td>
-<td>8401906.0</td>
-</tr>
-<tr>
-<td>Peak Daily Deaths Date</td>
-<td>2023-02-01 00:00:00</td>
-</tr>
-<tr>
-<td>Peak Daily Deaths</td>
-<td>57167.0</td>
-</tr>
-<tr>
-<td>Peak 7-Day Average Deaths Date</td>
-<td>2021-01-28 00:00:00</td>
-</tr>
-<tr>
-<td>Peak 7-Day Average Deaths</td>
-<td>14820.714285714286</td>
-</tr>
-</tbody>
-</table>
-<h3>Top 10 Countries by Cases</h3>
-<table>
-<thead>
-<tr>
-<th>country</th>
-<th>date</th>
-<th>total_cases</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>United States</td>
-<td>2026-10-18</td>
-<td>103,436,829.000</td>
-</tr>
-<tr>
-<td>China</td>
-<td>2026-10-18</td>
-<td>99,381,761.000</td>
-</tr>
-<tr>
-<td>India</td>
-<td>2026-10-18</td>
-<td>45,056,221.000</td>
-</tr>
-<tr>
-<td>France</td>
-<td>2026-10-18</td>
-<td>39,064,913.000</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>2026-10-18</td>
-<td>38,437,953.000</td>
-</tr>
-<tr>
-<td>Brazil</td>
-<td>2026-10-18</td>
-<td>38,058,695.000</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>2026-10-18</td>
-<td>34,571,873.000</td>
-</tr>
-<tr>
-<td>Japan</td>
-<td>2026-10-18</td>
-<td>33,803,572.000</td>
-</tr>
-<tr>
-<td>Italy</td>
-<td>2026-10-18</td>
-<td>26,969,918.000</td>
-</tr>
-<tr>
-<td>United Kingdom</td>
-<td>2026-10-18</td>
-<td>25,143,403.000</td>
-</tr>
-</tbody>
-</table>
-<h3>Top 10 Countries by Deaths</h3>
-<table>
-<thead>
-<tr>
-<th>country</th>
-<th>date</th>
-<th>total_deaths</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>United States</td>
-<td>2026-10-18</td>
-<td>1,240,149.000</td>
-</tr>
-<tr>
-<td>Brazil</td>
-<td>2026-10-18</td>
-<td>704,109.000</td>
-</tr>
-<tr>
-<td>India</td>
-<td>2026-10-18</td>
-<td>533,849.000</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>2026-10-18</td>
-<td>404,290.000</td>
-</tr>
-<tr>
-<td>Mexico</td>
-<td>2026-10-18</td>
-<td>335,205.000</td>
-</tr>
-<tr>
-<td>United Kingdom</td>
-<td>2026-10-18</td>
-<td>232,612.000</td>
-</tr>
-<tr>
-<td>Peru</td>
-<td>2026-10-18</td>
-<td>221,073.000</td>
-</tr>
-<tr>
-<td>Italy</td>
-<td>2026-10-18</td>
-<td>198,523.000</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>2026-10-18</td>
-<td>174,979.000</td>
-</tr>
-<tr>
-<td>France</td>
-<td>2026-10-18</td>
-<td>168,207.000</td>
-</tr>
-</tbody>
-</table>
-<h3>Bangladesh Vaccination Findings</h3>
-<table>
-<thead>
-<tr>
-<th>Metric</th>
-<th>Date</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>People Vaccinated</td>
-<td>2024-06-22</td>
-<td>151,507,170.000</td>
-</tr>
-<tr>
-<td>People Fully Vaccinated</td>
-<td>2024-07-01</td>
-<td>142,201,680.000</td>
-</tr>
-<tr>
-<td>Fully Vaccinated per 100</td>
-<td>2024-07-01</td>
-<td>83.952</td>
-</tr>
-</tbody>
-</table>
-<h3>Correlation Findings</h3>
-<table>
-<thead>
-<tr>
-<th>Variable 1</th>
-<th>Variable 2</th>
-<th>Pearson Correlation</th>
-<th>Spearman Correlation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>total_cases</td>
-<td>total_deaths</td>
-<td>0.767</td>
-<td>0.942</td>
-</tr>
-<tr>
-<td>total_tests</td>
-<td>total_cases</td>
-<td>0.655</td>
-<td>0.943</td>
-</tr>
-<tr>
-<td>people_fully_vaccinated_per_hundred</td>
-<td>total_deaths_per_million</td>
-<td>0.166</td>
-<td>0.220</td>
-</tr>
-</tbody>
-</table>
-<!-- STATISTICAL FINDINGS END -->
 </body>
+
 </html>
