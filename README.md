@@ -119,7 +119,7 @@ https://ourworldindata.org/coronavirus
 ## 📄  Reports
 
 The `reports/` directory contains statistical summaries, country-wise analysis, Bangladesh analysis, vaccination findings, and the final project report.
-[View Full Project Report (PDF)](reports/final_project_report.pdf)
+[View Full Project Report (PDF)](reports/COVID-19%20Data%20Analysis%20Report.pdf)
 
 [View HTML Report](reports/final_project_report.html)
 
