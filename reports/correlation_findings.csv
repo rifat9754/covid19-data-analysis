@@ -1,0 +1,4 @@
+Variable 1,Variable 2,Pearson Correlation,Spearman Correlation
+total_cases,total_deaths,0.7670340804975813,0.9421223301028013
+total_tests,total_cases,0.6553205754485214,0.9433780894222804
+people_fully_vaccinated_per_hundred,total_deaths_per_million,0.16561539333310132,0.2204929707954355
