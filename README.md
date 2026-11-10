@@ -116,9 +116,12 @@ The dataset is sourced from Our World in Data:
 
 https://ourworldindata.org/coronavirus
 
-## Reports
+## 📄  Reports
 
 The `reports/` directory contains statistical summaries, country-wise analysis, Bangladesh analysis, vaccination findings, and the final project report.
+[View Full Project Report (PDF)](reports/final_project_report.pdf)
+
+[View HTML Report](reports/final_project_report.html)
 
 ## Limitations
 
